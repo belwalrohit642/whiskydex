@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --prefer-dist
 
-      - run: php vendor/bin/drush app:env:generate --sqlite
+     # - run: php vendor/bin/drush app:env:generate --sqlite
       # - run: yarn install --non-interactive --cwd $GITHUB_WORKSPACE/web/core
 
       - run: mkdir -p private/browsertest_output
