@@ -1,0 +1,40 @@
+whiskeydex.admin_whiskeydex:
+  title: 'Whiskey Dex'
+  route_name: 'whiskeydex.admin_whiskeydex'
+  parent: 'system.admin'
+  description: 'Administer and configure Whiskey Dex.'
+  weight: -9
+whiskeydex.distillery:
+  title: 'Distilleries'
+  route_name: 'entity.distillery.collection'
+  parent: 'whiskeydex.admin_whiskeydex'
+  description: 'Manage distilleries.'
+  weight: 10
+whiskeydex.whiskey:
+  title: 'Whiskeys'
+  route_name: 'entity.whiskey.collection'
+  parent: 'whiskeydex.admin_whiskeydex'
+  description: 'Manage whiskeys.'
+  weight: 10
+whiskeydex.mailer_test_form:
+  title: 'Test emails'
+  route_name: 'whiskeydex.mailer_test_form'
+  parent: 'whiskeydex.admin_whiskeydex'
+  weight: 50
+#entity.collection_item.collection:
+#  title: Collection
+#  route_name: 'entity.collection_item.collection'
+#  menu_name: main
+
+whiskeydex.collection:
+  title: Collection
+  route_name: entity.collection_item.collection
+  menu_name: 'main'
+  description: 'View collection items.'
+  weight: 0
+whiskeydex.search:
+  title: Search
+  route_name: whiskeydex.browse_whiskeys
+  menu_name: main
+  description: Search for whiskeys
+  weight: 1

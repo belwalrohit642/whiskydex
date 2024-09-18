@@ -1,0 +1,8 @@
+name: Whiskey Dex
+description: the module
+type: module
+core_version_requirement: ^10
+dependencies:
+  - address:address
+  - drupal:telephone
+  - entity:entity

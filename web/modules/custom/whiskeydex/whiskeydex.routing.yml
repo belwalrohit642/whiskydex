@@ -1,0 +1,51 @@
+whiskeydex.admin_whiskeydex:
+  path: '/admin/whiskeydex'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Whiskey Dex'
+  requirements:
+    _permission: 'administer site configuration'
+whiskeydex.mailer_test_form:
+  path: '/admin/whiskeydex/test-email'
+  defaults:
+    _form: Drupal\whiskeydex\Form\MailerTestForm
+    _title: 'Test emails'
+  requirements:
+    _permission: 'administer site configuration'
+whiskeydex.browse_whiskeys:
+  path: '/whiskeys'
+  defaults:
+    _controller: \Drupal\whiskeydex\Controller\BrowseWhiskeyController::browser
+    _title: Whiskeys
+  requirements:
+    _permission: 'view whiskey'
+
+entity.whiskey.community_add_form:
+  path: '/whiskey/new'
+  defaults:
+    _entity_form: whiskey.community_add
+    entity_type_id: whiskey
+    _title: Add new whiskey
+  requirements:
+    _permission: 'view whiskey'
+
+whiskeydex.home:
+  path: /home
+  defaults:
+    _controller: \Drupal\whiskeydex\Controller\FrontController::front
+    _title: Home
+  requirements:
+    _permission: 'access content'
+
+whiskeydex.manifest:
+  path: /manifest.json
+  defaults:
+    _controller: \Drupal\whiskeydex\Controller\ProgressiveWebAppController::manifest
+  requirements:
+    _permission: 'access content'
+whiskeydex.service_worker:
+  path: /service-worker-script
+  defaults:
+    _controller: \Drupal\whiskeydex\Controller\ProgressiveWebAppController::serviceWorker
+  requirements:
+    _permission: 'access content'
