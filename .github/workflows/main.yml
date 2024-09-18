@@ -82,7 +82,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - run: php vendor/bin/drush app:env:generate --sqlite
+      #- run: php vendor/bin/drush app:env:generate --sqlite
       - run: php vendor/bin/drush site:install --yes
 
       - run: "cd web && php -S 127.0.0.1:8080 .ht.router.php &"
